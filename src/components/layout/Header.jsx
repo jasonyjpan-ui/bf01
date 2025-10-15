@@ -1,6 +1,6 @@
-import { useState } from "react"; 4.6k (gzipped: 1.9k)
-import { HiBars3 } from "react-icons/hi2"; 3.1k (gzipped: 1.3k)
-import { Link, useLocation} from "react-router-dom"; 193k (gzipped: 61.2k)
+import { useState } from "react"; 
+import { HiBars3 } from "react-icons/hi2"; 
+import { Link, useLocation} from "react-router-dom";
 import NavLinks from "./NavLinks";
 import {NAV_ITEMS, isPathActive} from "../../util/navigation";
 
@@ -21,6 +21,7 @@ export default function Header() {
                 onClick={() => setIsMenuOpen((open) => !open)}
             >
                 <HiBars3 className="w-6 h-6" />{" "}
+                
             </div>
             {isMenuOpen && (
                 <NavLinks
@@ -37,9 +38,14 @@ export default function Header() {
             to="/" 
             className="btn-ghost text-lg font-bold text-primary hover:text-primary-focus transition-colors duration-200"
             >
-                
+            🍔早餐時光🍳
             </Link>
-            
+            {/* 導覽列的中間部分 : 大螢幕的導航選單 */}
+            <div className="navbar-center hidden md:flex">
+                <NavLink item={NAV_ITEMS} isActive={isNavItemActiv}
+                listClassName="menu menu-horizontal px-1"
+                />
+            </div>
             </div>
         </header>
     );
