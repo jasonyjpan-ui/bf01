@@ -2,7 +2,7 @@ import { useState } from "react";
 import { HiBars3 } from "react-icons/hi2"; 
 import { Link, useLocation} from "react-router-dom";
 import NavLinks from "./NavLinks";
-import {NAV_ITEMS, isPathActive} from "../../util/navigation";
+import {NAV_ITEMS, isPathActive} from "../../utils/navigation";
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,7 +42,7 @@ export default function Header() {
             </Link>
             {/* 導覽列的中間部分 : 大螢幕的導航選單 */}
             <div className="navbar-center hidden md:flex">
-                <NavLink item={NAV_ITEMS} isActive={isNavItemActiv}
+                <NavLinks item={NAV_ITEMS} isActive={isNavItemActiv}
                 listClassName="menu menu-horizontal px-1"
                 />
             </div>
