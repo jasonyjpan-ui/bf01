@@ -1,4 +1,4 @@
-export const NAVI_ITEMS = [
+export const NAV_ITEMS = [
     {path: "/", label: "首頁", icon: "🏠"},
     {path: "/menu", label: "點餐菜單", icon: "🍔"},
     {path: "/about", label: "關於我們", icon: "👤"},
