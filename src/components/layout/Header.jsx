@@ -47,6 +47,10 @@ export default function Header() {
             listClassName="menu menu-horizontal px-1"
           />
         </div>
+        {/* 導覽列的右邊部分 : 切換主題、使用者設定 */}
+        <div className="nacBar-end flex items-center gap-2">
+          {/* 使用者設定: 下拉式選單 */}
+        </div>
       </div>
     </header>
   );
