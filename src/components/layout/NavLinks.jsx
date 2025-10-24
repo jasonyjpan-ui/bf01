@@ -13,12 +13,13 @@ export default function NavLinks({
         <Link
           key={item.path}
           to={item.path}
-          className={`flex items-center gap-2 ${
-            isActive && isActive(item.path)
-              ? "active bg-primary text-primary-content"
-              : "hover:bg-base-200"
-          } `}
-          onClick={() => onItemClick?.(item.path)}
+          className={`flex items-center gap-2 px-2
+            rounded ${
+              isActive?.(item.path)
+                ? "active bg-primary text-primary-content"
+                : "hover:bg-base-200"
+            } `}
+          onClick={() => onItemClick?.(item)}
         >
           <span className="text-lg">{item.icon}</span>
           {item.label}

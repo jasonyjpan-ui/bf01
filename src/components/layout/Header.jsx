@@ -1,11 +1,14 @@
 import { useState } from "react";
-import { HiBars3 } from "react-icons/hi2";
+import { HiBars3, HiMoon, HiSun } from "react-icons/hi2";
 import { Link, useLocation } from "react-router-dom";
 import NavLinks from "./NavLinks";
 import { NAV_ITEMS, isPathActive } from "../../utils/navigation";
+import UserMenu from "./UserMenu";
+import useTheme from "../../hook/useTheme";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme("light");
   const location = useLocation();
   const isNavItemActiv = (path) => isPathActive(path, location.pathname);
   return (
@@ -17,7 +20,7 @@ export default function Header() {
         }`}
       >
         <div
-          className="btn bg-ghost md:hidden"
+          className="btn bg-ghost lg:hidden"
           onClick={() => setIsMenuOpen((open) => !open)}
         >
           <HiBars3 className="w-6 h-6" />{" "}
@@ -48,8 +51,21 @@ export default function Header() {
           />
         </div>
         {/* 導覽列的右邊部分 : 切換主題、使用者設定 */}
-        <div className="nacBar-end flex items-center gap-2">
+        <div className="navBar-end flex items-center gap-2">
+          {/* 主題切換按鈕 */}
+          <button
+            onClick={toggleTheme}
+            aria-label="切換主題"
+            className="btn btn-ghost btn-circle bordor-2 bg-base-300"
+          >
+            {theme === "dark" ? (
+              <HiMoon className="w-6 h-6" />
+            ) : (
+              <HiSun className="w-6 h-6" />
+            )}
+          </button>
           {/* 使用者設定: 下拉式選單 */}
+          <UserMenu />
         </div>
       </div>
     </header>
