@@ -10,7 +10,11 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { theme, toggleTheme } = useTheme("light");
   const location = useLocation();
-  const isNavItemActiv = (path) => isPathActive(path, location.pathname);
+
+  // 修正 isPathActive 參數順序並改名為更直覺的 isNavItemActive
+  const isNavItemActive = (targetPath) =>
+    isPathActive(location.pathname, targetPath);
+
   return (
     <header className="navbar bg-base-100 shadow-lg">
       {/* 漢堡按鈕 */}
@@ -20,7 +24,7 @@ export default function Header() {
         }`}
       >
         <div
-          className="btn bg-ghost lg:hidden"
+          className="btn btn-ghost lg:hidden"
           onClick={() => setIsMenuOpen((open) => !open)}
         >
           <HiBars3 className="w-6 h-6" />{" "}
@@ -28,7 +32,7 @@ export default function Header() {
         {isMenuOpen && (
           <NavLinks
             items={NAV_ITEMS}
-            isActive={(path) => isNavItemActiv(location.pathname, path)}
+            isActive={isNavItemActive}
             onItemClick={() => setIsMenuOpen(false)}
             listClassName={
               "menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box min-w-max md:hidden"
@@ -45,18 +49,18 @@ export default function Header() {
         {/* 導覽列的中間部分 : 大螢幕的導航選單 */}
         <div className="navbar-center hidden md:flex">
           <NavLinks
-            item={NAV_ITEMS}
-            isActive={isNavItemActiv}
+            items={NAV_ITEMS}
+            isActive={isNavItemActive}
             listClassName="menu menu-horizontal px-1"
           />
         </div>
         {/* 導覽列的右邊部分 : 切換主題、使用者設定 */}
-        <div className="navBar-end flex items-center gap-2">
+        <div className="navbar-end flex items-center gap-2">
           {/* 主題切換按鈕 */}
           <button
             onClick={toggleTheme}
             aria-label="切換主題"
-            className="btn btn-ghost btn-circle bordor-2 bg-base-300"
+            className="btn btn-ghost btn-circle border-2 bg-base-300"
           >
             {theme === "dark" ? (
               <HiMoon className="w-6 h-6" />

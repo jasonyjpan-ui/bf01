@@ -19,7 +19,7 @@ export default function NavLinks({
                 ? "active bg-primary text-primary-content"
                 : "hover:bg-base-200"
             } `}
-          onClick={() => onItemClick?.(item)}
+          onClick={() => onItemClick?.(item.path)}
         >
           <span className="text-lg">{item.icon}</span>
           {item.label}

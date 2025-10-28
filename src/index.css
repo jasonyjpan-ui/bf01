@@ -1,5 +1,7 @@
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark;
+}
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 @theme {
@@ -10,6 +12,7 @@
   --color-border: #e2e8f0;
   --color-text-secondary: #64748b;
 }
+
 @theme.dark {
   --color-background: #0f172a;
   --color-foreground: #f8fafc;
