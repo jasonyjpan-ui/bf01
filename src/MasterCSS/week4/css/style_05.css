@@ -1,0 +1,20 @@
+.sticky-demo {
+  height: 300px;
+  overflow-y: scroll;
+  border: 2px solid #ddd;
+}
+
+.section {
+  padding: 20px;
+  min-height: 400px;
+}
+
+.sticky-title {
+  position: sticky;
+  top: 0;
+  background-color: #f8f9fa;
+  padding: 15px;
+  margin: 0 -20px 20px;
+  border-bottom: 2px solid #dee2e6;
+  z-index: 10;
+}

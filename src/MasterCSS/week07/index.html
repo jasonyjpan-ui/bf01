@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>CSS: Box Model</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <form class="modern-form">
+        <div class="form-header">
+          <h2>聯絡我們</h2>
+          <p>請填寫以下資訊，我們會盡快回覆您</p>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label required">姓名</label>
+            <input
+              type="text"
+              class="form-input"
+              placeholder="請輸入您的姓名"
+              required
+            />
+            <div class="form-feedback"></div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label required">電子郵件</label>
+            <input
+              type="email"
+              class="form-input"
+              placeholder="example@email.com"
+              required
+            />
+            <div class="form-feedback"></div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">電話號碼</label>
+            <input type="tel" class="form-input" placeholder="0912-345-678" />
+            <div class="form-feedback"></div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label required">主題</label>
+            <div class="custom-select">
+              <select class="form-input" required>
+                <option value="">請選擇主題</option>
+                <option value="general">一般詢問</option>
+                <option value="support">技術支援</option>
+                <option value="sales">銷售諮詢</option>
+                <option value="feedback">意見回饋</option>
+              </select>
+            </div>
+            <div class="form-feedback"></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label required">訊息內容</label>
+          <textarea
+            class="form-input"
+            rows="5"
+            placeholder="請詳細描述您的問題或需求..."
+            required
+          ></textarea>
+          <div class="form-feedback"></div>
+        </div>
+
+        <div class="form-group">
+          <label class="custom-checkbox">
+            <input type="checkbox" required />
+            <span class="checkmark"></span>
+            我同意 <a href="#" class="link">隱私政策</a> 和
+            <a href="#" class="link">服務條款</a>
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label class="custom-checkbox">
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+            訂閱我們的電子報以獲取最新消息
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="btn btn-secondary">取消</button>
+          <button type="submit" class="btn btn-primary">送出訊息</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

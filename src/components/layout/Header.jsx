@@ -1,15 +1,17 @@
 import { useState } from "react";
-import { HiBars3, HiMoon, HiSun } from "react-icons/hi2";
+import { HiBars3, HiMoon, HiSun, HiShoppingCart } from "react-icons/hi2";
 import { Link, useLocation } from "react-router-dom";
 import NavLinks from "./NavLinks";
 import { NAV_ITEMS, isPathActive } from "../../utils/navigation";
 import UserMenu from "./UserMenu";
 import useTheme from "../../hook/useTheme";
+import useCart from "../../hook/useCart";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { theme, toggleTheme } = useTheme("light");
   const location = useLocation();
+  const { cartCount } = useCart();
 
   // 修正 isPathActive 參數順序並改名為更直覺的 isNavItemActive
   const isNavItemActive = (targetPath) =>
@@ -56,6 +58,20 @@ export default function Header() {
         </div>
         {/* 導覽列的右邊部分 : 切換主題、使用者設定 */}
         <div className="navbar-end flex items-center gap-2">
+          <div className="indicator">
+            <Link
+              to="/cart"
+              className="btn btn-ghost btn-circle"
+              aria-label="購物車"
+            >
+              <HiShoppingCart className="w-6 h-6" />
+            </Link>
+            {cartCount > 0 && (
+              <span className="badge badge-sm indicator-item badge-primary">
+                {cartCount}
+              </span>
+            )}
+          </div>
           {/* 主題切換按鈕 */}
           <button
             onClick={toggleTheme}

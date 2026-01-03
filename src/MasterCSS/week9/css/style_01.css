@@ -1,0 +1,22 @@
+.flex-container {
+  display: flex;
+  background-color: #f8f9fa;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.item {
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+  margin: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.row {
+  flex-direction: row;
+}
+.column {
+  flex-direction: column;
+}

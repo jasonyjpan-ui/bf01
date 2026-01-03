@@ -1,0 +1,126 @@
+{
+  "menu": [
+    {
+      "id": "1",
+      "category": "breakfast",
+      "name": "經典早餐",
+      "description": "包含煎蛋、培根、吐司和咖啡",
+      "price": 25,
+      "image": "https://images.unsplash.com/photo-1553531889-56cc480ac5cb?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "2",
+      "category": "breakfast",
+      "name": "健康早餐",
+      "description": "包含燕麥、水果和優格",
+      "price": 20,
+      "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "3",
+      "category": "breakfast",
+      "name": "三明治系列",
+      "description": "新鮮現做三明治",
+      "price": 18,
+      "image": "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "4",
+      "category": "breakfast",
+      "name": "吐司系列",
+      "description": "香脆烤吐司",
+      "price": 15,
+      "image": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "5",
+      "category": "breakfast",
+      "name": "漢堡系列",
+      "description": "美式經典漢堡",
+      "price": 30,
+      "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "6",
+      "category": "breakfast",
+      "name": "鬆餅系列",
+      "description": "鬆軟香甜鬆餅",
+      "price": 22,
+      "image": "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "7",
+      "category": "breakfast",
+      "name": "蛋類料理",
+      "description": "多樣蛋類選擇",
+      "price": 12,
+      "image": "https://images.unsplash.com/photo-1587486913049-53fc88980cfc?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "8",
+      "category": "drink",
+      "name": "美式咖啡",
+      "description": "經典美式咖啡，提神醒腦",
+      "price": 15,
+      "image": "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "9",
+      "category": "drink",
+      "name": "拿鐵",
+      "description": "香濃牛奶與咖啡的完美結合",
+      "price": 20,
+      "image": "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "10",
+      "category": "drink",
+      "name": "咖啡系列",
+      "description": "精選咖啡豆",
+      "price": 25,
+      "image": "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "11",
+      "category": "drink",
+      "name": "茶類飲品",
+      "description": "台式茶飲",
+      "price": 20,
+      "image": "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "12",
+      "category": "drink",
+      "name": "果汁系列",
+      "description": "新鮮現榨果汁",
+      "price": 18,
+      "image": "https://images.unsplash.com/photo-1603569283847-aa295f0d016a?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "13",
+      "category": "drink",
+      "name": "奶類飲品",
+      "description": "香濃奶製品",
+      "price": 22,
+      "image": "https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=800&q=80"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ac28",
+      "userId": "user_37lIsBpau5K6dpfG82ygehFJHyV",
+      "items": [
+        {
+          "menuItemId": "2",
+          "name": "健康早餐",
+          "price": 20,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 20,
+      "status": "pending",
+      "createdAt": "2026-01-03T20:45:02.188Z"
+    }
+  ],
+  "cart": []
+}

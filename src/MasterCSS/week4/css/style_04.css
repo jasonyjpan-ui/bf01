@@ -1,0 +1,43 @@
+.fixed-demo {
+  height: 300px;
+  overflow-y: scroll;
+  border: 2px solid #ddd;
+  position: relative;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #2c3e50;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.content {
+  padding-top: 80px; /* 為固定標題留出空間 */
+  padding: 80px 20px 20px;
+  height: 800px; /* 模擬長內容 */
+}
+
+.fixed-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.8em;
+  z-index: 1000;
+}

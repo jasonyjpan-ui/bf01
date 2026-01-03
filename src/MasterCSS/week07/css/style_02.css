@@ -1,0 +1,155 @@
+.modern-table-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.modern-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Inter", sans-serif;
+}
+
+/* 現代表頭設計 */
+.modern-table thead th {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px 15px;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+}
+
+.th-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sort-icon {
+  opacity: 0.7;
+  font-size: 12px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.sort-icon:hover {
+  opacity: 1;
+}
+
+/* 表格內容樣式 */
+.modern-table tbody td {
+  padding: 15px;
+  border-bottom: 1px solid #f1f3f4;
+  vertical-align: middle;
+}
+
+.modern-table tbody tr:hover {
+  background-color: #f8f9ff;
+}
+
+/* 產品資訊樣式 */
+.product-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.product-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* 價格樣式 */
+.price {
+  font-weight: 600;
+  color: #2ecc71;
+  font-size: 16px;
+}
+
+/* 庫存資訊樣式 */
+.stock-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.stock-number {
+  font-weight: 600;
+  min-width: 30px;
+}
+
+.stock-bar {
+  flex: 1;
+  height: 6px;
+  background-color: #ecf0f1;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.stock-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #e74c3c, #f39c12, #2ecc71);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+/* 狀態標籤 */
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.active {
+  background-color: #d5f4e6;
+  color: #27ae60;
+}
+
+.status-badge.low {
+  background-color: #ffeaa7;
+  color: #e17055;
+}
+
+/* 操作按鈕 */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-edit,
+.btn-delete {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-edit {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-edit:hover {
+  background-color: #2980b9;
+}
+
+.btn-delete {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #c0392b;
+}

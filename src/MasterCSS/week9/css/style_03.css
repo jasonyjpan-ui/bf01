@@ -1,0 +1,46 @@
+.center-both {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-color: #f8f9fa;
+}
+
+.tall {
+  height: 80px;
+  background-color: green;
+}
+.short {
+  height: 40px;
+  background-color: yellow;
+}
+
+/* 拉伸填滿（預設） */
+.stretch {
+  align-items: stretch;
+  /* 項目拉伸以填滿容器高度 */
+}
+
+/* 起始對齊 */
+.flex-start {
+  align-items: flex-start;
+  /* 項目對齊到交叉軸起始位置 */
+}
+
+/* 結束對齊 */
+.flex-end {
+  align-items: flex-end;
+  /* 項目對齊到交叉軸結束位置 */
+}
+
+/* 置中對齊 */
+.center {
+  align-items: center;
+  /* 項目在交叉軸上置中 */
+}
+
+/* 基線對齊 */
+.baseline {
+  align-items: baseline;
+  /* 項目的文字基線對齊 */
+}

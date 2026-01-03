@@ -1,0 +1,40 @@
+/* 表格重置和基礎樣式 */
+.data-table {
+  width: 100%;
+  border-collapse: collapse; /* 合併邊框 */
+  border-spacing: 0; /* 移除間距 */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* 表頭樣式 */
+.data-table thead th {
+  background-color: #3498db;
+  color: white;
+  font-weight: 600;
+  text-align: left;
+  padding: 15px 12px;
+  border-bottom: 2px solid #2980b9;
+}
+
+/* 表格內容樣式 */
+.data-table tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #ecf0f1;
+  color: #2c3e50;
+}
+
+/* 行的交替顏色 */
+.data-table tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+/* 懸停效果 */
+.data-table tbody tr:hover {
+  background-color: #e3f2fd;
+  cursor: pointer;
+}

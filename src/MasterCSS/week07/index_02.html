@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style_02.css" />
+    <title>CSS: Box Model</title>
+  </head>
+  <body>
+    <div class="modern-table-container">
+      <table class="modern-table">
+        <thead>
+          <tr>
+            <th>
+              <div class="th-content">
+                <span>產品名稱</span>
+                <i class="sort-icon">↕</i>
+              </div>
+            </th>
+            <th>
+              <div class="th-content">
+                <span>價格</span>
+                <i class="sort-icon">↕</i>
+              </div>
+            </th>
+            <th>
+              <div class="th-content">
+                <span>庫存</span>
+                <i class="sort-icon">↕</i>
+              </div>
+            </th>
+            <th>
+              <div class="th-content">
+                <span>狀態</span>
+                <i class="sort-icon">↕</i>
+              </div>
+            </th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="product-info">
+                <img
+                  src="https://via.placeholder.com/40"
+                  alt="產品圖片"
+                  class="product-image"
+                />
+                <span>iPhone 15 Pro</span>
+              </div>
+            </td>
+            <td class="price">$999</td>
+            <td>
+              <div class="stock-info">
+                <span class="stock-number">25</span>
+                <div class="stock-bar">
+                  <div class="stock-fill" style="width: 50%"></div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <span class="status-badge active">有庫存</span>
+            </td>
+            <td>
+              <div class="action-buttons">
+                <button class="btn-edit">編輯</button>
+                <button class="btn-delete">刪除</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="product-info">
+                <img
+                  src="https://via.placeholder.com/40"
+                  alt="產品圖片"
+                  class="product-image"
+                />
+                <span>MacBook Pro</span>
+              </div>
+            </td>
+            <td class="price">$1,999</td>
+            <td>
+              <div class="stock-info">
+                <span class="stock-number">5</span>
+                <div class="stock-bar">
+                  <div class="stock-fill" style="width: 10%"></div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <span class="status-badge low">庫存不足</span>
+            </td>
+            <td>
+              <div class="action-buttons">
+                <button class="btn-edit">編輯</button>
+                <button class="btn-delete">刪除</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

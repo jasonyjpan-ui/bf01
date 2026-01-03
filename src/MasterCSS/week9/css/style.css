@@ -1,0 +1,64 @@
+/* 重置樣式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* 頁面整體佈局 */
+.page-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* 主要內容區域 */
+.main-content {
+  display: flex;
+  flex: 1; /* 佔用剩餘空間 */
+}
+
+/* 側邊欄 */
+.sidebar {
+  background-color: #ecf0f1;
+  width: 250px;
+  flex-shrink: 0; /* 防止縮小 */
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 10px 0;
+  border-bottom: 1px solid #bdc3c7;
+}
+
+/* 內容區域 */
+.content {
+  flex: 1; /* 佔用剩餘空間 */
+  padding: 20px;
+  background-color: white;
+}
+
+/* Footer */
+.footer {
+  background-color: #34495e;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
