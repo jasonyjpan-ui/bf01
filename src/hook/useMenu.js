@@ -11,6 +11,7 @@ export default function useMenu() {
       try {
         // 使用 Fetch API 向我們的模擬伺服器請求資料
         const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3301";
+        console.log("正在請求的網址:", `${API_URL}/menu`);
         const response = await fetch(`${API_URL}/menu`);
         if (!response.ok) {
           throw new Error("無法獲取菜單資料");
