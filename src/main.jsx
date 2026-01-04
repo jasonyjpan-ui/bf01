@@ -18,7 +18,6 @@ import { CartProvider } from "./contexts/CartProvider.jsx";
 import "./index.css";
 
 if (!clerkPublishableKey) {
-  // 在開發階段不要阻斷整個應用；用 warning 提示並繼續啟動
   console.warn(
     "Missing VITE_CLERK_PUBLISHABLE_KEY. ClerkProvider will be disabled. Add it to .env.local to enable Clerk features."
   );
@@ -46,7 +45,7 @@ createRoot(document.getElementById("root")).render(
       publishableKey={clerkPublishableKey}
       signUpPath="/register"
       signInPath="/login"
-      fallbackRedirectUrl="/" // 註冊成功後強制回首頁
+      fallbackRedirectUrl="/"
     >
       <CartProvider>
         <RouterProvider router={router} />

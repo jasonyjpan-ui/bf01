@@ -13,7 +13,6 @@ export default function Header() {
   const location = useLocation();
   const { cartCount } = useCart();
 
-  // 修正 isPathActive 參數順序並改名為更直覺的 isNavItemActive
   const isNavItemActive = (targetPath) =>
     isPathActive(location.pathname, targetPath);
 

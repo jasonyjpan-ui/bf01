@@ -1,4 +1,3 @@
-// src/pages/Menu.jsx
 import React, { useState } from "react";
 import useMenu from "../hook/useMenu";
 import { formatCurrency } from "../utils/helpers";
@@ -6,15 +5,13 @@ import { useUser } from "@clerk/clerk-react";
 import useCart from "../hook/useCart";
 
 const Menu = () => {
-  // 一行程式碼，搞定資料獲取的所有複雜邏輯！
   const { menuItems, isLoading, error } = useMenu();
   const { isSignedIn } = useUser();
   const { addToCart } = useCart();
 
-  const [isAdding, setIsAdding] = useState(null); // 追蹤哪個商品正在被加入
-  const [feedback, setFeedback] = useState(null); // 顯示成功或失敗訊息
+  const [isAdding, setIsAdding] = useState(null);
+  const [feedback, setFeedback] = useState(null);
 
-  // 處理載入中的情況
   if (isLoading) {
     return (
       <div className="flex justify-center items-center py-20">
@@ -23,7 +20,6 @@ const Menu = () => {
     );
   }
 
-  // 處理發生錯誤的情況
   if (error) {
     return (
       <div className="alert alert-error shadow-lg">
@@ -33,7 +29,7 @@ const Menu = () => {
   }
 
   const handleAddToCart = async (item) => {
-    if (isAdding) return; // 防止重複點擊
+    if (isAdding) return;
 
     setIsAdding(item.id);
     setFeedback(null);
@@ -47,12 +43,11 @@ const Menu = () => {
       });
     } finally {
       setIsAdding(null);
-      // 設定一個計時器，幾秒後自動隱藏提示訊息
+
       setTimeout(() => setFeedback(null), 3000);
     }
   };
 
-  // 成功獲取資料，渲染菜單列表
   return (
     <div className="space-y-12">
       {feedback && (
